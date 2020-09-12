@@ -1,0 +1,56 @@
+﻿@model WebApplication1.Models.Shopbridge_inventoryModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Shopbridge_inventoryModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.image_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.image_name)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    @if (!string.IsNullOrEmpty(Model.image_name))
+    {
+        <img src="https://localhost:44394/api/Values?fileName=@Model.image_name" alt="@Model.Name_" style="align-content:center;width:100%;"  />
+    }
+    else
+    {
+       <img src="" alt="@Model.Name_"/>
+    }
+</div>

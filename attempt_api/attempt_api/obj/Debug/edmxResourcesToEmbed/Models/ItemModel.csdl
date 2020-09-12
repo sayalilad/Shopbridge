@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mulanModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Shopbridge_inventory_1">
+    <Key>
+      <PropertyRef Name="Name_" />
+    </Key>
+    <Property Name="Name_" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="description_" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="image_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="thumb_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="mulanEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Shopbridge_inventory_1" EntityType="Self.Shopbridge_inventory_1" />
+  </EntityContainer>
+</Schema>

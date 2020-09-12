@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1 class="text-center">Shopbridge</h1>
+    <p class="lead text-center"> Shopbridge - India’s largest online supermarket, has revolutionized the way India shops for groceries.</p>
+</div>
+
+<div class="row">
+    <div class="col-xs-6 col-sm-8 col-lg-12">
+        <h2 class="text-center">Getting started</h2>
+        <p class="text-justify">
+            Online grocery shopping has never been easier. Need things fresh? Whether it’s fruits and vegetables or dairy and meat, we have this covered as well! Get fresh eggs, meat, fish and more online at your convenience.
+        </p>
+        <p class="text-center">
+            @*<a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Inventory Portal </a>*@
+            @*@Ajax.ActionLink("Inventory Portal","Index","ShopBridge_Inventory",new AjaxOptions {HttpMethod="GET" }, new { @target = "_blank" })*@
+            <a href="~/ShopBridge_Inventory/Index" target="_blank">Inventory Portal</a>
+        </p>
+    </div>
+</div>

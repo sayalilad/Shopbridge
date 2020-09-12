@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mulanModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Shopbridge_inventory_1">
+    <Key>
+      <PropertyRef Name="Name_" />
+    </Key>
+    <Property Name="Name_" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="description_" Type="nvarchar" MaxLength="1000" />
+    <Property Name="price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="image_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="thumb_name" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="mulanModel1StoreContainer">
+    <EntitySet Name="Shopbridge_inventory_1" EntityType="Self.Shopbridge_inventory_1" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mulanModel1StoreContainer" CdmEntityContainer="mulanEntities2">
+    <EntitySetMapping Name="Shopbridge_inventory_1">
+      <EntityTypeMapping TypeName="mulanModel1.Shopbridge_inventory_1">
+        <MappingFragment StoreEntitySet="Shopbridge_inventory_1">
+          <ScalarProperty Name="Name_" ColumnName="Name_" />
+          <ScalarProperty Name="description_" ColumnName="description_" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="image_name" ColumnName="image_name" />
+          <ScalarProperty Name="thumb_name" ColumnName="thumb_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

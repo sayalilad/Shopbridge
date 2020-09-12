@@ -1,0 +1,15 @@
+﻿@model WebApplication1.Models.Shopbridge_inventoryModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Shopbridge Inventory</h2>
+<p>
+    @Ajax.ActionLink("Create New", "Create", new AjaxOptions { UpdateTargetId = "dvCreateAjaxForm" })
+</p>
+<div id="dvCreateAjaxForm">
+</div>
+
+<div id="dvListofItems">
+    </div>

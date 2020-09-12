@@ -1,0 +1,79 @@
+﻿@model IEnumerable<WebApplication1.Models.Shopbridge_inventoryModel>
+
+@using (Ajax.BeginForm("_ListOfItems", new AjaxOptions
+{
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "dvListofItems",
+
+}))
+{
+
+
+    <table class="table">
+        <tr>
+            <th>
+                Thumbnail
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name_)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.description_)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                @{
+                    var RouteValueDictionary_ = new RouteValueDictionary();
+                    RouteValueDictionary_.Add("id", item.Name_);
+                }
+                <td>
+                    @if (!string.IsNullOrEmpty(item.thumb_name))
+                    {
+                        <img src="https://localhost:44394/api/Values?fileName=@item.thumb_name" alt="@item.thumb_name" class="thumbnail-lg" />
+                    }
+                    else
+                    {
+                        <img src="" alt="@item.Name_" class="thumbnail-lg" />
+                    }
+
+
+                </td>
+                <td>
+                    @* @{
+                        var RouteValueDictionary_ = new RouteValueDictionary();
+                        RouteValueDictionary_.Add("id", item.Name_);
+                    }
+                      @Ajax.ActionLink(item.Name_, "GetDetails",  @RouteValueDictionary_, new AjaxOptions
+                 {
+                     InsertionMode = InsertionMode.Replace,
+                     HttpMethod = "GET"
+                 }, htmlAttributes: new { target = "_blank" })*@
+                    @* @Html.ActionLink(item.Name_, "GetDetails", RouteValueDictionary_, new { Target = "blank" })*@
+                    <a href="~/ShopBridge_Inventory/GetDetails/@item.Name_" target="_blank">@item.Name_</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.description_)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.price)
+                </td>
+                <td>
+
+                    @Ajax.ActionLink("Delete", "DeleteItem", @RouteValueDictionary_, new AjaxOptions
+          {
+              HttpMethod = "DELETE"
+          })
+                </td>
+            </tr>
+        }
+
+    </table>
+}
